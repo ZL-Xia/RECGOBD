@@ -15,11 +15,7 @@ class SequenceLoader(object):
         self.train_steps = int(np.ceil(len(np.load(f'./mydata/{self.dataset_name[0]}_process_data/{self.dataset_name[0]}_train.npz')['features'])/batch_size))
         self.valid_steps = int(np.ceil(len(np.load(f'./mydata/{self.dataset_name[0]}_process_data/{self.dataset_name[0]}_val.npz')['features'])/batch_size))
         self.test_steps = int(np.ceil(len(np.load(f'./mydata/{self.dataset_name[0]}_process_data/{self.dataset_name[0]}_test.npz')['features'])/batch_size))
-
-        # data = np.load(f'/home/xiazhiliang/Project/Bioinfor-DeepATT-main/mydata/{self.dataset_name}.npz', allow_pickle=True)['arr_0']
-        # data = data.take(1)
-        # self.embedding_size = data.shape[-1]
-        
+     
         self.embedding_sizes = []
         for dataset_name in self.dataset_name:
             data = np.load(f'/home/xiazhiliang/Project/preprocessing/{dataset_name}.npz', allow_pickle=True)['arr_0']
