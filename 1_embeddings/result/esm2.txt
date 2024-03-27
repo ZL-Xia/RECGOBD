@@ -1,0 +1,37 @@
+Check the Deep learning Environment:
+GPU count:2, Memory growth:True, Soft device placement:True ...
+Check the Deep learning Environment:
+GPU count:2, Memory growth:True, Soft device placement:True ...
+2024-01-01 22:33:58.773486: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-01 22:33:59.623054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22310 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3090, pci bus id: 0000:18:00.0, compute capability: 8.6
+2024-01-01 22:33:59.623663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 22310 MB memory:  -> device: 1, name: NVIDIA GeForce RTX 3090, pci bus id: 0000:3b:00.0, compute capability: 8.6
+inputs.shape (None, 2000, 2560)
+temp.shape (None, 2000, 1024)
+query.shape (None, 10, 10)
+Model: "rec_gobd_1_embedding"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                multiple                  0 (unused)
+_________________________________________________________________
+bid_lstm (BidLSTM)           multiple                  12587008  
+_________________________________________________________________
+multi_head_attention (MultiH multiple                  984800    
+_________________________________________________________________
+dropout (Dropout)            multiple                  0         
+_________________________________________________________________
+dense_5 (Dense)              multiple                  40100     
+_________________________________________________________________
+dense_6 (Dense)              multiple                  101       
+=================================================================
+Total params: 13,612,009
+Trainable params: 13,612,009
+Non-trainable params: 0
+_________________________________________________________________
+Restored from ./result/config_test/0/checkpoints/ckpt-6
+2024-01-01 22:34:15.625650: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-01-01 22:34:16.811541: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+
+valid_AVG-AUROC:0.89641, valid_AVG-AUPR:0.58712.
+valid_AVG-F1_score:0.35461, valid_AVG-Fmax_score:0.18077.
