@@ -61,5 +61,5 @@ for sequence in data['Sequence']:
 features=np.array(features,dtype = object)
 # 打印特征列表
 print(features,features.shape)
-np.savez('same_protein_bert_2200_10label.npz', features)  #try_prot_bert_13label
+np.savez('same_ProtBert_2200_10label.npz', features)  
 

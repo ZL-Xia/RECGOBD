@@ -39,7 +39,7 @@
 # np.savez('try_esm2_3B_13label.npz', outputs)
 
 
-##csv文件处理
+##csv
 import numpy as np
 import pandas as pd
 import torch
@@ -88,7 +88,7 @@ print(sequence_representations.shape)
 np.savez('same_esm2_3B_2200_10label.npz', sequence_representations) #try_esm2_3B_13label_new
 
 
-# #fasta文件处理
+
 # import pandas as pd
 # import numpy as np
 # import torch
@@ -136,11 +136,5 @@ np.savez('same_esm2_3B_2200_10label.npz', sequence_representations) #try_esm2_3B
 # print(sequence_representations.shape)
 # np.savez('Ref_amino_esm2_3B.npz', sequence_representations)
 
-# import numpy as np
-# import torch
-# from transformers import AutoTokenizer, AutoModel
 
-# # Initialize tokenizer and model
-# tokenizer = AutoTokenizer.from_pretrained("facebook/esm2_t36_3B_UR50D")
-# model = AutoModel.from_pretrained("facebook/esm2_t36_3B_UR50D")
 
