@@ -27,8 +27,3 @@ python main.py -e test -c ./config/config_test.json
 
 ### 5.Result
 If you trained your model in ./4_embeddings, you can find the results in ./4_embeddings/result. Other n_embeddings are similar.
-
-=======
-
->>>>>>> c3a614c7a721724b0ec6c99f213d25993c32bcfd
-
