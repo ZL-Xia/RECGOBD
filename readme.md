@@ -20,10 +20,12 @@ python preprocess/preprocess.py
 ### 2. Model Training Requirements
 python 3.7 | tensorflow 2.6 | cuda 12.0| cudnn 8.1
 ### 3.Train
+```python
 python main.py -e train -c ./config/config_test.json
-
+```
 ### 4.Test
+```python
 python main.py -e test -c ./config/config_test.json
-
+```
 ### 5.Result
 If you trained your model in ./4_embeddings, you can find the results in ./4_embeddings/result. Other n_embeddings are similar.
