@@ -3,28 +3,28 @@ The RecGOBD model is a protein function prediction model based on TensorFlow 2.6
 ## USAGE
 We train our model on Nvidia GeForce 3090. Our dataset includes independent training, validation, and testing sets.
 ### 1. Sequence Embedding
-#### 1.1.Requirements
+#### 1.1. Requirements
 python 3.7 | pytorch 11.8 | cuda 12.0 | cudnn 8.1
-#### 1.2.Convert Sequences to Embeddings
+#### 1.2. Convert Sequences to Embeddings
 ```python
 python preprocess/esm.py
 python preprocess/prot_bert.py
 python preprocess/protein2vec.py
 python preprocess/onehot.py
 ```
-#### 1.3.Data Splitting
+#### 1.3. Data Splitting
 
 ```python
 python preprocess/preprocess.py
 ```
 ### 2. Model Training And Test
-#### 2.1.Requirement
+#### 2.1. Requirement
 python 3.7 | tensorflow 2.6 | cuda 12.0| cudnn 8.1
-#### 2.2.Training
+#### 2.2. Training
 ```python
 python main.py -e train -c ./config/config_test.json
 ```
-#### 2.3.Test
+#### 2.3. Test
 ```python
 python main.py -e test -c ./config/config_test.json
 ```
